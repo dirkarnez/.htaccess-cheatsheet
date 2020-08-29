@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^example.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/folder.*
+RewriteRule ^folder/(.*)$ http://folder.example.com/$1 [R=301,L]
